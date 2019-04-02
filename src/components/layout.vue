@@ -62,7 +62,7 @@
         />
       </vue-ads-drawer>
       <div style="background-color: skyblue;height: 400px;">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus, accusantium, animi aspernatur beatae cupiditate dolor doloribus ducimus, earum eius expedita fugiat harum hic modi molestias pariatur possimus quae quam quod recusandae rerum sapiente sunt tenetur ullam vitae voluptatem voluptates. Aliquam animi at beatae culpa delectus dolore dolorem eum eveniet facilis ipsam iste itaque, maiores maxime molestiae necessitatibus nulla numquam obcaecati odio odit omnis, placeat possimus quae quasi quis quisquam ratione sed sit tempora unde veritatis voluptate voluptates voluptatibus voluptatum? A culpa ea earum labore non porro saepe totam? A aspernatur at blanditiis, dolore facilis libero molestias optio quis voluptatum!
+        <TopBar @tip-color="getMsg" color="red"></TopBar>
       </div>
       <div style="background-color: gray;height: 400px;">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus, accusantium, animi aspernatur beatae cupiditate dolor doloribus ducimus, earum eius expedita fugiat harum hic modi molestias pariatur possimus quae quam quod recusandae rerum sapiente sunt tenetur ullam vitae voluptatem voluptates. Aliquam animi at beatae culpa delectus dolore dolorem eum eveniet facilis ipsam iste itaque, maiores maxime molestiae necessitatibus nulla numquam obcaecati odio odit omnis, placeat possimus quae quasi quis quisquam ratione sed sit tempora unde veritatis voluptate voluptates voluptatibus voluptatum? A culpa ea earum labore non porro saepe totam? A aspernatur at blanditiis, dolore facilis libero molestias optio quis voluptatum!
@@ -82,7 +82,6 @@ import '../../node_modules/@fortawesome/fontawesome-free/css/all.css'
 import '../../node_modules/vue-ads-layout/dist/vue-ads-layout.css'
 import Vuescroll from 'vuescroll'
 import {VueAdsLayout, VueAdsBar, VueAdsDrawer, VueAdsHideButton, VueAdsMinifyButton} from 'vue-ads-layout'
-
 export default {
   name: 'App',
 
@@ -128,6 +127,9 @@ export default {
 
     hideRight (hidden) {
       this.hiddenRight = hidden
+    },
+    getMsg (params) {
+      console.log(params)
     }
   }
 }
